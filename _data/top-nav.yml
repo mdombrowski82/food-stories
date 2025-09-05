@@ -3,8 +3,10 @@
   items:
     - title: "Cards"
       url: "/directories/"
-    - title: "Left Navbar"
-      url: "/directories/left-navbar"
+    - title: "Left Navbar Demo"
+      url: "/directories/left-nav-demo"
+    - title: "Left Profile Demo"
+      url: "/directories/left-profile-demo"
     - title: "Podcast List"
       url: "/podcasts"
     - title: "Map"

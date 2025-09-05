@@ -113,10 +113,11 @@ ToC ROWS
 }
 
 .toc-row h3 {
-  color: var(--text-primary); 
+  margin-top: 0;
   font-size:150%;
   text-transform: uppercase;
-  margin-top: 0;
+  color: var(--text-primary); 
+
 }
 
 .toc-row p {
@@ -124,6 +125,7 @@ ToC ROWS
   margin-bottom: 0;
   line-height: 1.4;
 }
+
 
 .toc-row-flex {
   display: flex;

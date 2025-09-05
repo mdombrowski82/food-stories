@@ -13,12 +13,17 @@
       id = "{{ include.bg-id }}-container">
 
   <div class="bg-multi"
-      style = "background-image: url('{{ image-path }}')"
-      id = "{{ include.bg-id }}-image"></div>
+        style = "background-image: url('{{ image-path }}')"
+        id = "{{ include.bg-id }}-image">
+  </div>
 
-    <div style="height: {{ include.pre-box-space }}vh">
-      &nbsp;
-    </div>
+  <div style="height: {{ include.above-box-space }}">&nbsp;</div>
 
-    <!-- leave this div open for long version here-->
-    <div id="{{ include.bg-id }}-textbox" class="bg-text-box" markdown="1"> 
+  <!-- 
+    Leave the below div open!
+    This allows a large textbox to be in the markdown file rather than in the include,
+    which is much easier to edit and manage.
+    Close this div on your page by including the bg-multi-long-close.html file
+    after your text box content.
+  -->
+  <div id="{{ include.bg-id }}-textbox" class="bg-text-box" markdown="1"> 

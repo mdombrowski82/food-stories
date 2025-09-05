@@ -41,16 +41,12 @@ html, body {
 
 
 /* --- Headings --- */
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   margin-bottom: 0.5rem;
   font-family: "Futura", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05rem;
-  color: var(--cream);
 }
 
 h1 {
@@ -74,18 +70,20 @@ h4 {
   font-size: 1.3rem;
 }
 
-/* code blocks */
+p {
+  font-size: 18px;
+}
+
+
+/* --- Code blocks --- */
 .highlight {
-  margin: 1rem 0;
-  padding: 0 .5rem;
   font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
   font-size: .9em;
   background: #7ec4ea;
   color: #333;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  overflow-x: auto;
 }
+
 
 /* --- Links --- */
 a {
@@ -124,7 +122,6 @@ nav {
 }
 
 nav a {
-  margin: 0 1em;
   font-family: "Space Mono", monospace;
   color: var(--cream);
 }
@@ -133,14 +130,8 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* --- Sections --- */
-section {
-  padding: 4em 10%;
-}
 
-section.alt {
-  background: var(--bg-alt);
-}
+
 
 /* --- Cards/Blocks --- */
 .card {
@@ -163,16 +154,11 @@ ToC ROWS
 *****************************************************/
 
 .toc-row {
-  background: var(--bg-alt, #1C1C1C);
+  background-color: var(--bg-alt, #1C1C1C);
   border-left: 3px solid var(--accent, #D62828);
   border-radius: 6px;
   overflow: hidden;
   transition: all 0.3s ease;
-}
-
-.toc-row a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .toc-row:hover {
@@ -183,41 +169,24 @@ ToC ROWS
   cursor: pointer;
 }
 
-.toc-row .row {
-  align-items: center;
+.toc-row a {
 }
 
+
 .toc-row img.card-image {
-  object-fit: cover;
-  height: 100%;
-  max-height: 16rem;
-  width: 100%;
-  border-radius: 4px;
 }
 
 .toc-row h3 {
-  margin-top: 0;
   font-size:150%;
-  color: var(--cream, #c6c4bd);
   text-transform: uppercase;
   letter-spacing: 0.05rem;
+  color: var(--cream, #c6c4bd);
 }
 
 .toc-row p {
-  color: var(--text-muted, #bcbcbc);
-  margin-bottom: 0;
-  line-height: 1.4;
-}
-
-
-.toc-row-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .toc-body {
-  flex: 1;
 }
 
 .toc-arrow {
@@ -254,6 +223,8 @@ button:hover,
   background: var(--ochre);
 }
 
+
+
 /* --- Footer --- */
 footer {
   background: var(--charcoal);
@@ -261,24 +232,4 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: var(--text-muted);
-}
-
-/* --- Bauhaus Geometric Accents --- */
-.shape-circle {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: var(--ochre);
-  position: absolute;
-  z-index: -1;
-  opacity: 0.15;
-}
-
-.shape-block {
-  width: 150px;
-  height: 150px;
-  background: var(--red);
-  position: absolute;
-  z-index: -1;
-  opacity: 0.1;
 }

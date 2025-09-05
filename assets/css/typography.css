@@ -209,9 +209,9 @@ PULLQUOTES
 
 
 /* desktop styles */
-@media screen and (min-width: 58em) {
+@media screen and (min-width: 1280px) {
   .pullquote {
-    margin-left: -15%;
+    margin-left: -10%;
   }
 
   aside.right {

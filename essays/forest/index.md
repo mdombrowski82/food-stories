@@ -15,15 +15,15 @@ tags:
     - music
 ---
 
-## A Sample Essay
-This essay shows the kinds of essay elements you can employ on your essay pages. Most of the text is just dummy text to keep the focus on the page elements.
+# Welcome to the Jungle
+This essay shows almost all the design elements you can employ on your essay pages. Most of the text is just dummy text to keep the focus on the page elements.
 
 
 ## Second heading
 {% include figure.html 
 class="right" 
 width="48%" 
-caption="Mauris dolor ante, vehicula a turpis at, finibus suscipit mauris. [Source](https://rmoa.unm.edu/docviewer.php?docId=nmu1unma028.xml)" 
+caption="Mauris dolor ante, vehicula a turpis at, finibus suscipit mauris." 
 image-path="images/mvh-history-stays.jpg" 
 %}
 
@@ -54,11 +54,8 @@ Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculu
   height="220vh"
   position="top"
   image-path="images/mvh-women-supervision.jpg"
-  pre-box-space = "100vh"
-  font-size = "250%"
-  line-height = "150%"
-  box-content='
-       One stated reason for building a men-only dorm is that Hokona Hall could be freed up to be used as a women-only dorm, where they would have supervision "of the best sort".'
+  above-box-space = "100vh"
+  box-content=' One stated reason for building a men-only dorm is that Hokona Hall could be freed up to be used as a women-only dorm, where they would have supervision "of the best sort".'
 %}
 
 
@@ -77,7 +74,7 @@ Praesent sed vehicula velit, vel hendrerit neque. Vivamus scelerisque sed nunc n
 {% include scrollybox/bg-multi-long.html
   bg-id="bg1"
   image-path="images/mvh-floorplan.jpg"
-  pre-box-space="0"
+  above-box-space="0"
   font-size = "150%"
   line-height = "100%"
 %}
