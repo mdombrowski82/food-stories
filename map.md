@@ -1,6 +1,7 @@
 ---
 title: Map
-layout: map
+layout: map 
+start_coords: [44.967, -103.767]
 ---
 
 <!-- define JSON object for displaying data from site pages -->
@@ -12,7 +13,9 @@ layout: map
       {% unless first %},{% endunless %}
       {
         "title": {{ page.title | jsonify }},
+        "baseurl": {{ site.baseurl | jsonify }},
         "url": {{ page.url | jsonify }},
+        "headerimage": {{ page.header-image | jsonify }},
         "placename": {{ page.placename | jsonify }},
         "summary": {{ page.summary | jsonify }},
         "geo": {{ page.geo | jsonify }}
@@ -36,23 +39,27 @@ document.addEventListener("DOMContentLoaded", function() {
   const pages = JSON.parse(document.getElementById('page-data').textContent);
 
   // Initialize the map
-  var map = L.map('map').setView([39, -98], 4);
+  var map = L.map('map').setView({{ page.start_coords | jsonify }}, 4);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
 
-  pages.forEach(page => {
-    if (page.geo && page.geo.length === 2) {
-      L.marker(page.geo)
-        .addTo(map)
-        .bindPopup(`<a href="{{site.baseurl}}${page.url}">
-        <h4>${page.placename}</h4>
-        <h5>${page.title}</h5>
-        <div class="map-card">${page.summary}</div>
-        </a>`);
-    }
+pages.forEach(p => {
+  if (!p.geo) return;
+  const marker = L.marker(p.geo).addTo(map);
+  const imgHtml = p["headerimage"] ? `<img src="${p.baseurl}${p.url}${p.headerimage}" alt="${p.title}">` : "";
+  const html = `
+    <div class="popup-wrapper">
+      ${imgHtml}
+      <div class="popup-text">
+        <div class="popup-title"><a href="${p.baseurl}${p.url}">${p.title}</a></div>
+        <p class="popup-placename">${p.placename || ""}</p>
+        <p class="popup-summary">${p.summary || ""}</p>
+      </div>
+    </div>`;
+  marker.bindPopup(html);
   });
 });
 </script>

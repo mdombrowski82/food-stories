@@ -1,43 +1,59 @@
-
 /*****************************************************
 CARDS
 *****************************************************/
 
-/* Shared card styles */
 .card {
+  /* Display */
   overflow: hidden;
+  
+  /* Typography */
+  font-family: var(--font-body);
+  
+  /* Visual */
   background: var(--bg-secondary-light);
-  opacity: .9;
-  border-radius: 8px;
-  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Source Sans 3', sans-serif;
+  border-radius: var(--radius-md);
+  opacity: 0.9;
+  
+  /* Interactivity */
+  transition: transform var(--transition-normal), opacity var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .card:hover {
+  /* Visual */
   opacity: 1;
+  box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card a {
-  border-bottom: 0;
-  color: var(--text-primary);
+  /* Typography */
   text-decoration: none;
+  color: var(--text-primary);
+  
+  /* Visual */
+  border-bottom: 0;
 }
 
 .card-body {
-  padding: 1.5rem;
-  font-family: 'Source Sans 3', sans-serif;
+  /* Box Model */
+  padding: var(--spacing-md);
+  
+  /* Typography */
+  font-family: var(--font-body);
 }
 
 .card h3 {
-  margin: 0.5rem 0 1rem 0;
+  /* Box Model */
+  margin: var(--spacing-xs) 0 var(--spacing-sm) 0;
+  
+  /* Typography */
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--text-primary);
 }
 
 .card-text {
+  /* Typography */
   font-size: 1rem;
   font-weight: normal;
   color: var(--text-secondary);
@@ -46,19 +62,26 @@ CARDS
 
 /* Vertical cards for grid layouts */
 .v-card {
+  /* Display */
   display: flex;
   flex-direction: column;
+  
+  /* Box Model */
   height: 100%;
   min-height: 20rem;
 }
 
 .v-card .card-img-top {
-  height: 15rem;
-  object-fit: cover;
+  /* Box Model */
   width: 100%;
+  height: 15rem;
+  
+  /* Visual */
+  object-fit: cover;
 }
 
 .v-card .card-body {
+  /* Display */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,73 +89,94 @@ CARDS
 }
 
 .v-card:hover {
+  /* Visual */
   transform: scale(1.03);
 }
 
 
 /* Horizontal cards for stacked layouts */
 .h-card {
+  /* Display */
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  
+  /* Box Model */
   min-height: 12rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .h-card .card-img-left {
+  /* Box Model */
   flex: 0 0 200px;
-  object-fit: cover;
   width: 200px;
   height: 100%;
+  
+  /* Visual */
+  object-fit: cover;
 }
 
 .h-card .card-body {
-  flex: 1 1 auto;
+  /* Display */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1 1 auto;
 }
 
 .h-card:hover {
+  /* Visual */
   transform: translateX(8px);
 }
 
 /* Card link wrapper */
 .h-card a.card-link {
+  /* Display */
   display: flex;
   flex-direction: row;
   align-items: stretch;
   flex: 1;
+  
+  /* Typography */
   text-decoration: none;
   color: inherit;
 }
 
 .h-card a.card-link:hover {
+  /* Typography */
   text-decoration: none;
 }
 
 /* Tags in cards */
 .card .tags {
+  /* Display */
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  
+  /* Box Model */
   margin-top: 0.75rem;
 }
 
 .card .tags .badge {
+  /* Box Model */
+  padding: 0.35rem 0.65rem;
+  
+  /* Typography */
   font-size: 0.85rem;
   font-weight: normal;
-  padding: 0.35rem 0.65rem;
 }
 
 
 /* Responsive: horizontal cards become vertical on small screens */
 @media (max-width: 768px) {
   .h-card {
+    /* Display */
     flex-direction: column;
   }
   
   .h-card .card-img-left {
+    /* Box Model */
     flex: 0 0 auto;
     width: 100%;
     height: 200px;
@@ -147,33 +191,37 @@ ToC ROWS
 *****************************************************/
 
 .toc-row {
-  /* Display & Layout */
+  /* Display */
   align-items: center;
   overflow: hidden;
 
   /* Box Model */
-  margin-bottom: 1rem;
-  padding: 1.5rem;
-
-  /* Border & Background */
-  background: var(--bg-secondary);
-  border-left: 3px solid rgba(184, 125, 75, 0.7);
-  border-radius: 6px;
+  margin-bottom: var(--spacing-sm);
+  padding: var(--spacing-md);
 
   /* Typography */
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   font-weight: 300;
 
-  /* Animation */
-  transition: all 0.3s ease;
+  /* Visual */
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--clay);
+  border-radius: 6px;
+
+  /* Interactivity */
+  transition: all var(--transition-normal);
 }
 
 .toc-row:hover {
-  border-left-color: rgba(184, 125, 75, 1);
+  /* Visual */
+  border-left-color: var(--interactive-hover);
+  
+  /* Interactivity */
   cursor: pointer;
 }
 
 .toc-row a {
+  /* Typography */
   font-weight: normal !important;
   text-decoration: none;
   color: inherit;
@@ -181,42 +229,59 @@ ToC ROWS
 
 
 .toc-row h3 {
+  /* Box Model */
   margin-top: 0;
+  
+  /* Typography */
   font-size: 150%;
   color: var(--text-primary);
   text-transform: uppercase;
 }
 
 .toc-row p {
+  /* Box Model */
   margin-bottom: 0;
+  
+  /* Typography */
   color: var(--text-secondary);
   line-height: 1.4;
 }
 
 .toc-row-flex {
+  /* Display */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .toc-body {
+  /* Display */
   flex: 1;
 }
 
 .toc-arrow {
+  /* Display */
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
-  margin-left: 2rem;
+  
+  /* Box Model */
+  margin-left: var(--spacing-lg);
+  
+  /* Visual */
   opacity: 0.7;
-  transition: opacity 0.3s ease;
+  
+  /* Interactivity */
+  transition: opacity var(--transition-normal);
 }
 
 .toc-arrow svg {
+  /* Box Model */
   width: 4rem;
   height: 4rem;
 }
 
 .toc-row:hover .toc-arrow {
+  /* Visual */
   opacity: 1;
 }

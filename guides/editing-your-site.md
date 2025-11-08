@@ -36,12 +36,12 @@ Of course you'll want to add your own pages. The GitHub website does not have an
 ---
 
 ## Edit the navigation bar
-Now we need to add the new page to the navigation bar
-- Click on the `_includes` directory
-- Click on `nav.html`
+Now we need to add the new page to the navigation bar. Xanthan makes it easy to edit your nav bar through a simple data file.
+- Click on the `_data` folder
+- Click on `top-nav.yml`
 - Click on the edit icon (looks like a pencil)
-- Duplicate (via copy and paste) on of the lines that contains a link to a page on your site
-- Replace the old link with the name of the page you just created but WITHOUT the `.md` extension
+- Even if the file syntax is unfamiliar, it is straightforward. If you follow the same pattern as existing links, you can easily add, rename, or remove what comes with the template.
+- In this case, you can find an existing header to list your new page under, or make it a top-level nav link.
 - Hit the green Commit button near the bottom of the page
 
 ---

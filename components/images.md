@@ -79,6 +79,23 @@ Vestibulum euismod tempus sem sit amet scelerisque. Curabitur hendrerit fermentu
 In hac habitasse platea dictumst. Sed ultrices venenatis nunc et eleifend. Praesent sapien enim, porta egestas tortor vitae, imperdiet mollis velit. Cras quis quam lacus. Cras ac felis sed nunc bibendum rutrum vitae at massa. Mauris id vestibulum dolor. Vivamus iaculis sollicitudin purus sit amet gravida. Aliquam erat diam, pretium eget urna at, pretium bibendum nunc. Nullam finibus aliquet diam, in ullamcorper odio vulputate tincidunt.
 
 
+
+### You can have them centered
+So you can see that having an image at 50% of the page width creates a lot of space that would be awkward to cram text into. But sometimes it's useful to set an image apart from the text to highlight it.
+
+{% include figure.html
+  class="center"
+  width="50%"
+  caption="What a nice view, again"
+  image-path="/assets/images/backgrounds/hike-1.jpg"
+%}
+
+Vestibulum euismod tempus sem sit amet scelerisque. Curabitur hendrerit fermentum rutrum. Nam suscipit dictum purus, non rhoncus dui sodales nec. Etiam convallis arcu metus, ut cursus risus porttitor sit amet. Duis ut sapien varius libero efficitur vehicula. Sed id massa id elit ullamcorper feugiat. In hac habitasse platea dictumst.
+
+In hac habitasse platea dictumst. Sed ultrices venenatis nunc et eleifend. Praesent sapien enim, porta egestas tortor vitae, imperdiet mollis velit. Cras quis quam lacus. Cras ac felis sed nunc bibendum rutrum vitae at massa. Mauris id vestibulum dolor. Vivamus iaculis sollicitudin purus sit amet gravida. Aliquam erat diam, pretium eget urna at, pretium bibendum nunc. Nullam finibus aliquet diam, in ullamcorper odio vulputate tincidunt.
+
+
+
 ### Side by side
 To achieve two images side by side use, make sure the width for each is 48%. (It's less than 50% to make room for margins.) **Note that you use `class="left"` for both images so they simply stack horizontally left to right.**
 
@@ -106,6 +123,9 @@ image-path="/assets/images/default.jpg"
 %}
 ```
 {%endraw%}
+
+
+
 
 
 ### Full-width

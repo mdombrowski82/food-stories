@@ -1,11 +1,10 @@
 ---
-title: Getting Started
+title: Xanthan home
 layout: base
 date: 2024-12-02
 ---
 
-
-# Your home page
+# Welcome to Xanthan
 
 {% include figure.html
   class="right"
@@ -21,8 +20,6 @@ At its core, Xanthan supports creative approaches to scholarship and teaching. I
 
 Unlike commercial platforms such as Wix or Squarespace, Xanthan emphasizes openness and durability over quick customization. Updating your site takes a little more attention to detail, but you don’t need any technical background to get started. 
 
-The goal is to provide a gentle path into digital publishing that foregrounds design and storytelling as essential tools for communicating about the humanities.
+The goal is to provide a gentle path into digital publishing that foregrounds technical literacy, collaboration, sustainability, design and storytelling as essential tools for communicating about the humanities.
 
-For more information about your site works, see the `Website Guides` tab.
-
-For more on adding features to your pages, see the documentation under the `Page Components` tab.
+If you're brand new, jump into our set of guides and [get started](guides/getting-started)!

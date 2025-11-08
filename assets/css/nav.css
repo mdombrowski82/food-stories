@@ -4,118 +4,161 @@ NAVIGATION
 
 @media screen {
 
-
 /*****************************************************
 TOPNAV
 *****************************************************/
 
 .navbar {
-  padding: .5rem 1rem;
-  border-bottom: 1px solid var(--border);
-  font-family: 'Source Sans 3', sans-serif;
-  background-color: var(--bg-tertiary) !important;
+  /* Box Model */
+  padding: var(--spacing-xs) var(--spacing-sm);
+  
+  /* Typography */
+  font-family: var(--font-body);
+  font-size: 0.9rem;
   color: var(--text-tertiary) !important;
+  
+  /* Visual */
+  background-color: var(--bg-tertiary) !important;
+  border-bottom: 1px solid var(--border-primary);
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold !important;
+  /* Typography */
+  font-size: 1.1rem;
+  font-weight: 600 !important;
   text-decoration: none;
+  
+  /* Visual */
   border-bottom: none;
 }
 
 .navbar-brand:hover {
+  /* Typography */
   color: var(--text-tertiary) !important;
 }
 
 .navbar-nav {
+  /* Display */
   display: flex;
   list-style: none;
-  gap: 1rem;
-  
+  gap: var(--spacing-sm);
 }
 
 .navbar-nav a {
-  color: var(--text-tertiary);
+  /* Box Model */
+  padding: var(--spacing-xs) var(--spacing-sm);
+  
+  /* Typography */
   text-decoration: none;
-  padding: .5rem 1rem;
-  border-radius: 4px;
-  transition: background 0.15s, color 0.15s;
+  color: var(--text-tertiary);
+  
+  /* Visual */
+  border-radius: var(--radius-sm);
+  
+  /* Interactivity */
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .navbar-nav a:hover,
 .navbar-nav a.active {
-  background: var(--clay);
+  /* Typography */
   color: var(--text-tertiary);
+  
+  /* Visual */
+  background: var(--interactive-hover);
 }
 
 ul .dropdown-menu {
+  /* Visual */
   background-color: var(--bg-tertiary) !important;
 }
 
 .nav-link.dropdown-toggle.show {
-  background-color: var(--clay);
+  /* Typography */
   color: var(--text-tertiary);
+  
+  /* Visual */
+  background-color: var(--interactive-hover);
 }
 
 /*****************************************************
 SIDENAV
 *****************************************************/
 .left-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 25vw;
-    height: 100vh;
-    padding: 2rem 1rem;
-    background: var(--bg-secondary);
-    border-right: 1px solid var(--border);
-    z-index: 100;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
-    overflow-y: auto;
-  }
-
-h2.left-bar-nav-section {
-    margin-top: 1.3rem;
-    padding-left: 0;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: -.02rem;
-    color: var(--text-primary);
-    border-bottom: 1px solid var(--border);
+  /* Positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+  /* Box Model */
+  width: 25vw;
+  height: 100vh;
+  padding: var(--spacing-lg) var(--spacing-sm);
+  overflow-y: auto;
+  
+  /* Visual */
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-md);
 }
 
+h2.left-bar-nav-section {
+  /* Box Model */
+  margin-top: 1.3rem;
+  padding-left: 0;
+  
+  /* Typography */
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  letter-spacing: -0.02rem;
+  color: var(--text-primary);
+  
+  /* Visual */
+  border-bottom: 1px solid var(--border-primary);
+}
 
 .left-bar ul {
+  /* Box Model */
+  margin: 0 0 0 var(--spacing-sm);
   padding: 0;
-  margin: 0 0 0 1rem;
+  
+  /* Display */
   list-style: none;
 }
 
 .left-bar-nav-item {
+  /* Box Model */
+  margin: 0 0 var(--spacing-sm) 0;
   padding: 0;
-  margin: 0 0 1rem 0;
 }
 
 .left-bar-nav-item a {
-  font-family: 'Source Sans 3', sans-serif;
+  /* Typography */
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: normal;
   text-decoration: none;
-  color: #333;
+  color: var(--text-primary);
+  
+  /* Visual */
   border-bottom: none;
   border-radius: 6px;
-  transition: background 0.15s, color 0.15s;
+  
+  /* Interactivity */
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .left-bar-nav-item a:hover,
 .left-bar-nav-item a.active {
-  color: var(--text-link);
+  /* Typography */
   text-decoration: underline;
+  color: var(--text-link);
 }
 
 .main-content {
-  margin-left: 25vw; /* same as sidebar width */
+  /* Box Model */
+  margin-left: 25vw;
 }
 
 
@@ -123,22 +166,27 @@ h2.left-bar-nav-section {
 BREADCRUMB NAVIGATION
 *****************************************************/
 .breadcrumb-nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 16px 0;
+  /* Display */
   display: flex;
+  list-style: none;
   gap: 8px;
+  
+  /* Box Model */
+  margin: 0 0 16px 0;
+  padding: 0;
 }
 
 .breadcrumb-nav-list-item a {
-  color: #0072b1;
-  text-decoration: none;
+  /* Typography */
   font-size: 1rem;
+  text-decoration: none;
+  color: var(--info);
 }
 
 .breadcrumb-nav-list-item span {
-  color: #555;
+  /* Typography */
   font-size: 1rem;
+  color: var(--text-secondary);
 }
 
 
