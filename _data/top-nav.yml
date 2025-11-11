@@ -3,12 +3,3 @@
 
 - title: "Stories"
   url: "/stories"
-
-- title: "Page components"
-  items:
-    - title: "Typography"
-      url: "/components/typography"
-    - title: "Images"
-      url: "/components/images"
-    - title: "Headers"
-      url: "/components/headers"
